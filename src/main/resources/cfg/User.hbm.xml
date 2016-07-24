@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "classpath://org/hibernate/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="model">
+
+    <!-- access="field" for fields that have no setter methods -->
+    <class name="User" table="USERS">
+
+        <id name="id" access="field">
+            <generator class="uuid"/>
+        </id>
+
+        <property name="login" access="field"/>
+
+    </class>
+
+</hibernate-mapping>

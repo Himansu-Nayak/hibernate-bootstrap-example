@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<hibernate-mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns="http://www.hibernate.org/xsd/hibernate-mapping"
+                   xsi:schemaLocation="http://www.hibernate.org/xsd/hibernate-mapping classpath://org/hibernate/hibernate-mapping-4.0.xsd"
+
+                   package="model">
+
+    <!-- access="field" for fields that have no setter methods -->
+    <class name="NoIdUser" table="NO_ID_USERS">
+
+        <id type="string">
+            <generator class="uuid"/>
+        </id>
+
+        <property name="login" access="field"/>
+
+    </class>
+
+</hibernate-mapping>
